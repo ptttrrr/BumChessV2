@@ -47,7 +47,6 @@ namespace BumChessV2.Forms
                 this.cells[i].Click += new System.EventHandler(this.ClickHandler);
         }
 
-
         //event handler for button clicks
         private void ClickHandler(object sender, System.EventArgs e)
         {
@@ -78,7 +77,6 @@ namespace BumChessV2.Forms
             GetStats();               
         }
 
-
         private void GetStats()
         {
             HideShowControls(true);
@@ -86,12 +84,10 @@ namespace BumChessV2.Forms
             timer.Stop();
             string roundTime = time.AddSeconds(seconds).ToString("HH:mm:ss");
 
-
             ChangePlayer(playerType);
             lblCongrats.Text = "you're a hero, " + currentPlayer.ToString() + ". Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
             btnReplay.Visible = true;
         }
-
 
         private void ChangePlayer(Opponent opp)
         {
@@ -111,9 +107,6 @@ namespace BumChessV2.Forms
             seconds++;
         }
 
-      
-
-
         private void NewGameInit()
         {
             // startTime = DateTime.Now;
@@ -123,11 +116,8 @@ namespace BumChessV2.Forms
             seconds = 0;
         }
 
-
-
         private void btnSaveScore_Click(object sender, EventArgs e)
         {
-
             highScore.CalculateScoreAndStore(game.Moves, seconds, txtEnterName.Text);
             List<string> Top5List = new List<string>(highScore.ShowHighScore());
 
@@ -136,9 +126,7 @@ namespace BumChessV2.Forms
             lblHS3.Text = Top5List[2];
             lblHS4.Text = Top5List[1];
             lblHS5.Text = Top5List[0];
-
-        }
-        
+        }        
 
         private void btnReplay_Click(object sender, EventArgs e)
         {
@@ -160,7 +148,5 @@ namespace BumChessV2.Forms
             txtEnterName.Visible = showhide;
             btnSaveScore.Visible = showhide;
         }
-
-
     }
 }

@@ -67,7 +67,6 @@
       <DependentUpon>initForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GameMechanics.cs" />
-    <Compile Include="Highscore.cs" />
     <Compile Include="Jukebox.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
