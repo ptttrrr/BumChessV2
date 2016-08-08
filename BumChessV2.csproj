@@ -76,10 +76,16 @@
     <EmbeddedResource Include="Forms\GameForm1.resx">
       <DependentUpon>GameForm1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GameForm1.sv-SE.resx">
+      <DependentUpon>GameForm1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\GameForm2.resx">
       <DependentUpon>GameForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\initForm.resx">
+      <DependentUpon>initForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\initForm.sv-SE.resx">
       <DependentUpon>initForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">

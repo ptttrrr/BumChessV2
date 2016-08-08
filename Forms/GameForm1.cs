@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Globalization;
+using System.Threading;
 
 namespace BumChessV2.Forms
 {
@@ -18,8 +20,9 @@ namespace BumChessV2.Forms
         private bool roundOngoing = true;
         private Team currentPlayer = Team.X;
         private Opponent playerType;
+        private Language lang;
         private int seconds;
-        Timer timer = new Timer();
+        System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private DateTime time;
 
         Jukebox music = new Jukebox();
@@ -27,17 +30,29 @@ namespace BumChessV2.Forms
         Highscore highScore = new Highscore();
         ComputerPlayer cpu = new ComputerPlayer();
 
+
         public GameForm1(Language lang, Opponent player2)
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             playerType = player2;
             music.MusicMaestro(2);
+            this.lang = lang;
+
+            if (lang == Language.swe)
+            {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo("sv-SE");
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
+            }
         }
         
 
         private void GameForm1_Load(object sender, EventArgs e)
         {
+
+
+
+
             HideShowControls(false);
             //creating array of buttons
             cells = new Button[9] { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 };
@@ -78,7 +93,6 @@ namespace BumChessV2.Forms
                 {
                     clickedCell.Text = "O";
                 }
-                    
 
                 game.Moves++;
 
@@ -94,8 +108,6 @@ namespace BumChessV2.Forms
             //yay.      
             GetStats();               
         }
-
-
 
 
         private void GetStats()
@@ -203,11 +215,6 @@ namespace BumChessV2.Forms
         }
 
 
-        private void ComputerMove()
-        {
-
-        }
-
         //hide/show controls
         public void HideShowControls(bool showhide)
         {
@@ -235,7 +242,6 @@ namespace BumChessV2.Forms
                 PopulateHighScoreList();
             }
         }
-
 
         //back to main game menu
         private void btnBackToInitForm_Click(object sender, EventArgs e)
