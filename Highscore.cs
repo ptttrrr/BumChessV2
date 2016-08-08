@@ -9,18 +9,18 @@ namespace BumChessV2
     class Highscore
     {
         protected int baseScore = 1000;
-        private SortedDictionary<int, string> highscores = new SortedDictionary<int, string>(new DuplicateScoreComparer<int>());
+        private SortedList<int, string> highscores = new SortedList<int, string>(new DuplicateScoreComparer<int>());
 
         public Highscore()
         {
-            highscores.Add(000, "___");
-            highscores.Add(000, "___");
-            highscores.Add(000, "___");
-            highscores.Add(000, "___");
-            highscores.Add(000, "___");
+            highscores.Add(500, "Gert");
+            highscores.Add(42, "Deckard");
+            highscores.Add(666, "Belsebub");
+            highscores.Add(0, "Donald");
+            highscores.Add(242, "Mupp");
         }
 
-
+        
         public void CalculateScoreAndStore(int moves, int time, string alias)
         {
             int score = baseScore - (moves + time);
@@ -32,25 +32,16 @@ namespace BumChessV2
         //sorting highscore, get rid of worst score if there is more than 5, returning it as a list
         public List<string> ShowHighScore()
         {
-            List<string> HighScoreList = new List<string>();
+            if (highscores.Count > 5)
+                highscores.RemoveAt(0);
+            
+            List<string> highScoreList = new List<string>();
 
-            //if (highscores.Count > 5)
-            //{
-            //    highscores.Remove(highscores.Keys.Last());
-               
-            //}
-
-            var list = highscores.ToList();
-
-            foreach (KeyValuePair<int, string> pair in list)
+            foreach (KeyValuePair<int, string> pair in highscores)
             {
-                HighScoreList.Add(pair.Value.ToString() + " " + pair.Key.ToString());
+                highScoreList.Add(pair.Key.ToString() + " points by " + pair.Value.ToString());
             }
-
-            HighScoreList.RemoveAt(0);
-
-
-            return HighScoreList;
+            return highScoreList;
         }
 
 

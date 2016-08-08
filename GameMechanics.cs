@@ -32,7 +32,7 @@ namespace BumChessV2
                 if (b1.Text == b2.Text && b2.Text == b3.Text)           
                 {                                                      
                     b1.BackColor = b2.BackColor = b3.BackColor = Color.Aqua;
-                  
+
                     return true; 
                 }
             }

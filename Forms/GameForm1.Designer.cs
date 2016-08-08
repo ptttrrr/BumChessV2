@@ -39,7 +39,6 @@
             this.btn8 = new System.Windows.Forms.Button();
             this.btn9 = new System.Windows.Forms.Button();
             this.btnReplay = new System.Windows.Forms.Button();
-            this.panelSplash = new System.Windows.Forms.Panel();
             this.txtEnterName = new System.Windows.Forms.TextBox();
             this.btnSaveScore = new System.Windows.Forms.Button();
             this.lblenterName = new System.Windows.Forms.Label();
@@ -49,13 +48,14 @@
             this.lblHS3 = new System.Windows.Forms.Label();
             this.lblHS4 = new System.Windows.Forms.Label();
             this.lblHS5 = new System.Windows.Forms.Label();
+            this.btnBackToInitForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblCongrats
             // 
             this.lblCongrats.AutoSize = true;
             this.lblCongrats.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCongrats.Location = new System.Drawing.Point(371, 24);
+            this.lblCongrats.Location = new System.Drawing.Point(330, 13);
             this.lblCongrats.Name = "lblCongrats";
             this.lblCongrats.Size = new System.Drawing.Size(64, 18);
             this.lblCongrats.TabIndex = 0;
@@ -153,16 +153,9 @@
             this.btnReplay.UseVisualStyleBackColor = false;
             this.btnReplay.Click += new System.EventHandler(this.btnReplay_Click);
             // 
-            // panelSplash
-            // 
-            this.panelSplash.Location = new System.Drawing.Point(12, 13);
-            this.panelSplash.Name = "panelSplash";
-            this.panelSplash.Size = new System.Drawing.Size(312, 311);
-            this.panelSplash.TabIndex = 11;
-            // 
             // txtEnterName
             // 
-            this.txtEnterName.Location = new System.Drawing.Point(481, 199);
+            this.txtEnterName.Location = new System.Drawing.Point(493, 198);
             this.txtEnterName.Name = "txtEnterName";
             this.txtEnterName.Size = new System.Drawing.Size(144, 20);
             this.txtEnterName.TabIndex = 12;
@@ -170,7 +163,7 @@
             // btnSaveScore
             // 
             this.btnSaveScore.BackColor = System.Drawing.Color.PaleGreen;
-            this.btnSaveScore.Location = new System.Drawing.Point(481, 225);
+            this.btnSaveScore.Location = new System.Drawing.Point(493, 224);
             this.btnSaveScore.Name = "btnSaveScore";
             this.btnSaveScore.Size = new System.Drawing.Size(94, 22);
             this.btnSaveScore.TabIndex = 13;
@@ -181,7 +174,7 @@
             // lblenterName
             // 
             this.lblenterName.AutoSize = true;
-            this.lblenterName.Location = new System.Drawing.Point(478, 183);
+            this.lblenterName.Location = new System.Drawing.Point(490, 182);
             this.lblenterName.Name = "lblenterName";
             this.lblenterName.Size = new System.Drawing.Size(64, 13);
             this.lblenterName.TabIndex = 14;
@@ -190,7 +183,7 @@
             // lblHighScore
             // 
             this.lblHighScore.AutoSize = true;
-            this.lblHighScore.Location = new System.Drawing.Point(478, 67);
+            this.lblHighScore.Location = new System.Drawing.Point(490, 69);
             this.lblHighScore.Name = "lblHighScore";
             this.lblHighScore.Size = new System.Drawing.Size(95, 13);
             this.lblHighScore.TabIndex = 15;
@@ -199,7 +192,7 @@
             // lblHS1
             // 
             this.lblHS1.AutoSize = true;
-            this.lblHS1.Location = new System.Drawing.Point(478, 98);
+            this.lblHS1.Location = new System.Drawing.Point(490, 100);
             this.lblHS1.Name = "lblHS1";
             this.lblHS1.Size = new System.Drawing.Size(35, 13);
             this.lblHS1.TabIndex = 16;
@@ -208,7 +201,7 @@
             // lblHS2
             // 
             this.lblHS2.AutoSize = true;
-            this.lblHS2.Location = new System.Drawing.Point(478, 111);
+            this.lblHS2.Location = new System.Drawing.Point(490, 113);
             this.lblHS2.Name = "lblHS2";
             this.lblHS2.Size = new System.Drawing.Size(35, 13);
             this.lblHS2.TabIndex = 17;
@@ -217,7 +210,7 @@
             // lblHS3
             // 
             this.lblHS3.AutoSize = true;
-            this.lblHS3.Location = new System.Drawing.Point(478, 124);
+            this.lblHS3.Location = new System.Drawing.Point(490, 126);
             this.lblHS3.Name = "lblHS3";
             this.lblHS3.Size = new System.Drawing.Size(35, 13);
             this.lblHS3.TabIndex = 18;
@@ -226,7 +219,7 @@
             // lblHS4
             // 
             this.lblHS4.AutoSize = true;
-            this.lblHS4.Location = new System.Drawing.Point(478, 137);
+            this.lblHS4.Location = new System.Drawing.Point(490, 139);
             this.lblHS4.Name = "lblHS4";
             this.lblHS4.Size = new System.Drawing.Size(35, 13);
             this.lblHS4.TabIndex = 19;
@@ -235,11 +228,22 @@
             // lblHS5
             // 
             this.lblHS5.AutoSize = true;
-            this.lblHS5.Location = new System.Drawing.Point(478, 150);
+            this.lblHS5.Location = new System.Drawing.Point(490, 152);
             this.lblHS5.Name = "lblHS5";
             this.lblHS5.Size = new System.Drawing.Size(35, 13);
             this.lblHS5.TabIndex = 20;
             this.lblHS5.Text = "label6";
+            // 
+            // btnBackToInitForm
+            // 
+            this.btnBackToInitForm.BackColor = System.Drawing.Color.PaleGreen;
+            this.btnBackToInitForm.Location = new System.Drawing.Point(736, 6);
+            this.btnBackToInitForm.Name = "btnBackToInitForm";
+            this.btnBackToInitForm.Size = new System.Drawing.Size(27, 27);
+            this.btnBackToInitForm.TabIndex = 21;
+            this.btnBackToInitForm.Text = "X";
+            this.btnBackToInitForm.UseVisualStyleBackColor = false;
+            this.btnBackToInitForm.Click += new System.EventHandler(this.btnBackToInitForm_Click);
             // 
             // GameForm1
             // 
@@ -247,6 +251,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(775, 336);
+            this.Controls.Add(this.btnBackToInitForm);
             this.Controls.Add(this.lblHS5);
             this.Controls.Add(this.lblHS4);
             this.Controls.Add(this.lblHS3);
@@ -256,7 +261,6 @@
             this.Controls.Add(this.lblenterName);
             this.Controls.Add(this.btnSaveScore);
             this.Controls.Add(this.txtEnterName);
-            this.Controls.Add(this.panelSplash);
             this.Controls.Add(this.btnReplay);
             this.Controls.Add(this.btn9);
             this.Controls.Add(this.btn8);
@@ -290,7 +294,6 @@
         private System.Windows.Forms.Button btn8;
         private System.Windows.Forms.Button btn9;
         private System.Windows.Forms.Button btnReplay;
-        private System.Windows.Forms.Panel panelSplash;
         private System.Windows.Forms.TextBox txtEnterName;
         private System.Windows.Forms.Button btnSaveScore;
         private System.Windows.Forms.Label lblenterName;
@@ -300,5 +303,6 @@
         private System.Windows.Forms.Label lblHS3;
         private System.Windows.Forms.Label lblHS4;
         private System.Windows.Forms.Label lblHS5;
+        private System.Windows.Forms.Button btnBackToInitForm;
     }
 }
