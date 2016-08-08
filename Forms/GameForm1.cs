@@ -26,7 +26,6 @@ namespace BumChessV2.Forms
         GameMechanics game = new GameMechanics();
         Highscore highScore = new Highscore();
 
-
         public GameForm1(Language lang, Opponent player2)
         {
             InitializeComponent();
@@ -35,8 +34,7 @@ namespace BumChessV2.Forms
             music.MusicMaestro(2);
 
             NewGameInit();
-        }
-        
+        }        
 
         private void GameForm1_Load(object sender, EventArgs e)
         {
@@ -133,7 +131,6 @@ namespace BumChessV2.Forms
         {
 
         }
-
 
         private void ComputerMove()
         {
