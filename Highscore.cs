@@ -49,6 +49,7 @@ namespace BumChessV2
 
             HighScoreList.RemoveAt(0);
 
+
             return HighScoreList;
         }
 
