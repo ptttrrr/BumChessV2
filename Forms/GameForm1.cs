@@ -114,6 +114,7 @@ namespace BumChessV2.Forms
             timer.Enabled = true;
             timer.Tick += new EventHandler(timer_Tick);
             seconds = 0;
+            roundOngoing = true;
         }
 
         private void btnSaveScore_Click(object sender, EventArgs e)
@@ -129,9 +130,17 @@ namespace BumChessV2.Forms
         }        
 
 
+        //reset board and restart game
         private void btnReplay_Click(object sender, EventArgs e)
         {
+            panelSplash.Visible = false;
 
+            foreach (Button cell in cells)
+            {
+                cell.Text = "";
+            }
+
+            NewGameInit();         
         }
 
 

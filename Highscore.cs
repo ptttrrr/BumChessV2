@@ -34,10 +34,11 @@ namespace BumChessV2
         {
             List<string> HighScoreList = new List<string>();
 
-            if (highscores.Count > 5)
-            {
-                highscores.Remove(highscores.Keys.Last());
-            }
+            //if (highscores.Count > 5)
+            //{
+            //    highscores.Remove(highscores.Keys.Last());
+               
+            //}
 
             var list = highscores.ToList();
 
@@ -45,6 +46,9 @@ namespace BumChessV2
             {
                 HighScoreList.Add(pair.Value.ToString() + " " + pair.Key.ToString());
             }
+
+            HighScoreList.RemoveAt(0);
+
             return HighScoreList;
         }
 

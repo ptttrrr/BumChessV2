@@ -39,6 +39,11 @@ namespace BumChessV2
             return false;
         }
 
+        public void ResetGameBoard()
+        {
+
+        }
+
 
 
     }

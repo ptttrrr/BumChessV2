@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DuplicateScoreComparer.cs" />
-    <Compile Include="enumerations.cs" />
+    <Compile Include="Enumerations.cs" />
     <Compile Include="Forms\GameForm1.cs">
       <SubType>Form</SubType>
     </Compile>
