@@ -43,10 +43,5 @@ namespace BumChessV2
             }
             return highScoreList;
         }
-
-
     }
-
-
-
 }
