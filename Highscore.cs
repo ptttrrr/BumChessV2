@@ -42,13 +42,13 @@ namespace BumChessV2
             var list = highscores.ToList();
 
             foreach (KeyValuePair<int, string> pair in list)
-            {             
+            {
                 HighScoreList.Add(pair.Value.ToString() + " " + pair.Key.ToString());
             }
-            return HighScoreList;       
+            return HighScoreList;
         }
 
- 
+
     }
 
 
