@@ -9,11 +9,11 @@ namespace BumChessV2
     class Highscore
     {
         protected int baseScore = 1000;
-       // private SortedDictionary<int, string> highScores = new SortedDictionary<int, string>();
         private SortedDictionary<int, string> highscores = new SortedDictionary<int, string>(new DuplicateScoreComparer<int>());
 
         public Highscore()
         {
+            highscores.Add(000, "___");
             highscores.Add(000, "___");
             highscores.Add(000, "___");
             highscores.Add(000, "___");
@@ -28,12 +28,11 @@ namespace BumChessV2
             highscores[score] = alias;
         }
 
+
         //sorting highscore, get rid of worst score if there is more than 5, returning it as a list
         public List<string> ShowHighScore()
         {
             List<string> HighScoreList = new List<string>();
-
-
 
             if (highscores.Count > 5)
             {
