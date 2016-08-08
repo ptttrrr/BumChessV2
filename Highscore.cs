@@ -9,16 +9,15 @@ namespace BumChessV2
     class Highscore
     {
         protected int baseScore = 1000;
-        public SortedDictionary<int, string> highScores { get; set; }
+       // private SortedDictionary<int, string> highScores = new SortedDictionary<int, string>();
+        private SortedDictionary<int, string> highscores = new SortedDictionary<int, string>(new DuplicateScoreComparer<int>());
 
         public Highscore()
         {
-            
-            highScores[000] = "___";
-            highScores[000] = "___";
-            highScores[000] = "___";
-            highScores[000] = "___";
-            highScores[000] = "___";
+            highscores.Add(000, "___");
+            highscores.Add(000, "___");
+            highscores.Add(000, "___");
+            highscores.Add(000, "___");
         }
 
 
@@ -26,7 +25,7 @@ namespace BumChessV2
         {
             int score = baseScore - (moves + time);
 
-            highScores[score] = alias;
+            highscores[score] = alias;
         }
 
         //sorting highscore, get rid of worst score if there is more than 5, returning it as a list
@@ -34,16 +33,18 @@ namespace BumChessV2
         {
             List<string> HighScoreList = new List<string>();
 
-            if (highScores.Count > 5)
+
+
+            if (highscores.Count > 5)
             {
-                highScores.Remove(highScores.Keys.Last());
+                highscores.Remove(highscores.Keys.Last());
             }
 
-            var list = highScores.Keys.ToList();
+            var list = highscores.ToList();
 
-            foreach (var key in list)
+            foreach (KeyValuePair<int, string> pair in list)
             {             
-                HighScoreList.Add(key.ToString());
+                HighScoreList.Add(pair.Value.ToString() + " " + pair.Key.ToString());
             }
             return HighScoreList;       
         }

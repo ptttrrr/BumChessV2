@@ -18,7 +18,9 @@ namespace BumChessV2.Forms
         private bool roundOngoing = true;
         private Team currentPlayer = Team.X;
         private Opponent playerType;
-       // DateTime startTime;
+        private int seconds;
+        Timer timer = new Timer();
+        private DateTime time;
 
         Jukebox music = new Jukebox();
         GameMechanics game = new GameMechanics();
@@ -81,10 +83,12 @@ namespace BumChessV2.Forms
         {
             HideShowControls(true);
 
-            
+            timer.Stop();
+            string roundTime = time.AddSeconds(seconds).ToString("HH:mm:ss");
+
 
             ChangePlayer(playerType);
-            lblCongrats.Text = "you're a hero, " + currentPlayer.ToString() + ". Game was over in " + game.Moves + " moves and " + TimePlayed(startTime).ToString() + " seconds";
+            lblCongrats.Text = "you're a hero, " + currentPlayer.ToString() + ". Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
             btnReplay.Visible = true;
         }
 
@@ -102,29 +106,37 @@ namespace BumChessV2.Forms
             }
         }
 
-
-        public int TimePlayed(DateTime startTime)
+        private void timer_Tick(object sender, EventArgs e)
         {
-        
-            DateTime EndTime = DateTime.Now;
-            TimeSpan span = EndTime - startTime;
-            
-            int time =Convert.ToInt32(span.TotalSeconds);
-
-            return time;
+            seconds++;
         }
+
+      
 
 
         private void NewGameInit()
         {
-            startTime = DateTime.Now;
+            // startTime = DateTime.Now;
+            timer.Interval = 1000;
+            timer.Enabled = true;
+            timer.Tick += new EventHandler(timer_Tick);
+            seconds = 0;
         }
 
 
 
         private void btnSaveScore_Click(object sender, EventArgs e)
         {
-            highScore.CalculateScoreAndStore(game.Moves, TimePlayed, txtEnterName.Text);
+
+            highScore.CalculateScoreAndStore(game.Moves, seconds, txtEnterName.Text);
+            List<string> Top5List = new List<string>(highScore.ShowHighScore());
+
+            lblHS1.Text = Top5List[4];
+            lblHS2.Text = Top5List[3];
+            lblHS3.Text = Top5List[2];
+            lblHS4.Text = Top5List[1];
+            lblHS5.Text = Top5List[0];
+
         }
         
 

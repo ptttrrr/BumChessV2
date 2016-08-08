@@ -43,16 +43,23 @@
             this.txtEnterName = new System.Windows.Forms.TextBox();
             this.btnSaveScore = new System.Windows.Forms.Button();
             this.lblenterName = new System.Windows.Forms.Label();
+            this.lblHighScore = new System.Windows.Forms.Label();
+            this.lblHS1 = new System.Windows.Forms.Label();
+            this.lblHS2 = new System.Windows.Forms.Label();
+            this.lblHS3 = new System.Windows.Forms.Label();
+            this.lblHS4 = new System.Windows.Forms.Label();
+            this.lblHS5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCongrats
             // 
             this.lblCongrats.AutoSize = true;
-            this.lblCongrats.Font = new System.Drawing.Font("Impact", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCongrats.Location = new System.Drawing.Point(347, 13);
+            this.lblCongrats.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCongrats.Location = new System.Drawing.Point(371, 24);
             this.lblCongrats.Name = "lblCongrats";
-            this.lblCongrats.Size = new System.Drawing.Size(0, 17);
+            this.lblCongrats.Size = new System.Drawing.Size(64, 18);
             this.lblCongrats.TabIndex = 0;
+            this.lblCongrats.Text = "[wininfo]";
             // 
             // btn1
             // 
@@ -180,12 +187,72 @@
             this.lblenterName.TabIndex = 14;
             this.lblenterName.Text = "Enter name:";
             // 
+            // lblHighScore
+            // 
+            this.lblHighScore.AutoSize = true;
+            this.lblHighScore.Location = new System.Drawing.Point(478, 67);
+            this.lblHighScore.Name = "lblHighScore";
+            this.lblHighScore.Size = new System.Drawing.Size(95, 13);
+            this.lblHighScore.TabIndex = 15;
+            this.lblHighScore.Text = "H I G H S C O R E";
+            // 
+            // lblHS1
+            // 
+            this.lblHS1.AutoSize = true;
+            this.lblHS1.Location = new System.Drawing.Point(478, 98);
+            this.lblHS1.Name = "lblHS1";
+            this.lblHS1.Size = new System.Drawing.Size(35, 13);
+            this.lblHS1.TabIndex = 16;
+            this.lblHS1.Text = "label2";
+            // 
+            // lblHS2
+            // 
+            this.lblHS2.AutoSize = true;
+            this.lblHS2.Location = new System.Drawing.Point(478, 111);
+            this.lblHS2.Name = "lblHS2";
+            this.lblHS2.Size = new System.Drawing.Size(35, 13);
+            this.lblHS2.TabIndex = 17;
+            this.lblHS2.Text = "label3";
+            // 
+            // lblHS3
+            // 
+            this.lblHS3.AutoSize = true;
+            this.lblHS3.Location = new System.Drawing.Point(478, 124);
+            this.lblHS3.Name = "lblHS3";
+            this.lblHS3.Size = new System.Drawing.Size(35, 13);
+            this.lblHS3.TabIndex = 18;
+            this.lblHS3.Text = "label4";
+            // 
+            // lblHS4
+            // 
+            this.lblHS4.AutoSize = true;
+            this.lblHS4.Location = new System.Drawing.Point(478, 137);
+            this.lblHS4.Name = "lblHS4";
+            this.lblHS4.Size = new System.Drawing.Size(35, 13);
+            this.lblHS4.TabIndex = 19;
+            this.lblHS4.Text = "label5";
+            // 
+            // lblHS5
+            // 
+            this.lblHS5.AutoSize = true;
+            this.lblHS5.Location = new System.Drawing.Point(478, 150);
+            this.lblHS5.Name = "lblHS5";
+            this.lblHS5.Size = new System.Drawing.Size(35, 13);
+            this.lblHS5.TabIndex = 20;
+            this.lblHS5.Text = "label6";
+            // 
             // GameForm1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(775, 336);
+            this.Controls.Add(this.lblHS5);
+            this.Controls.Add(this.lblHS4);
+            this.Controls.Add(this.lblHS3);
+            this.Controls.Add(this.lblHS2);
+            this.Controls.Add(this.lblHS1);
+            this.Controls.Add(this.lblHighScore);
             this.Controls.Add(this.lblenterName);
             this.Controls.Add(this.btnSaveScore);
             this.Controls.Add(this.txtEnterName);
@@ -227,5 +294,11 @@
         private System.Windows.Forms.TextBox txtEnterName;
         private System.Windows.Forms.Button btnSaveScore;
         private System.Windows.Forms.Label lblenterName;
+        private System.Windows.Forms.Label lblHighScore;
+        private System.Windows.Forms.Label lblHS1;
+        private System.Windows.Forms.Label lblHS2;
+        private System.Windows.Forms.Label lblHS3;
+        private System.Windows.Forms.Label lblHS4;
+        private System.Windows.Forms.Label lblHS5;
     }
 }
