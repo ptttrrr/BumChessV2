@@ -20,6 +20,7 @@ namespace BumChessV2
             highscores.Add(242, "Mupp");
         }
 
+
         
         public void CalculateScoreAndStore(int moves, int time, string alias)
         {

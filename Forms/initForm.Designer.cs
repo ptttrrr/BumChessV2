@@ -38,6 +38,7 @@
             this.chckBoxHardmode = new System.Windows.Forms.CheckBox();
             this.lblErrorMsg = new System.Windows.Forms.Label();
             this.cBoxOpponent = new System.Windows.Forms.ComboBox();
+            this.cBoxBoardSize = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btnEnglish
@@ -65,7 +66,7 @@
             // 
             this.btnQuitGame.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnQuitGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitGame.Location = new System.Drawing.Point(237, 285);
+            this.btnQuitGame.Location = new System.Drawing.Point(237, 323);
             this.btnQuitGame.Name = "btnQuitGame";
             this.btnQuitGame.Size = new System.Drawing.Size(117, 46);
             this.btnQuitGame.TabIndex = 2;
@@ -77,7 +78,7 @@
             // 
             this.btnStartGame.BackColor = System.Drawing.Color.PaleTurquoise;
             this.btnStartGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnStartGame.Location = new System.Drawing.Point(99, 285);
+            this.btnStartGame.Location = new System.Drawing.Point(99, 323);
             this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(117, 46);
             this.btnStartGame.TabIndex = 3;
@@ -136,13 +137,23 @@
             this.cBoxOpponent.TabIndex = 8;
             this.cBoxOpponent.SelectedIndexChanged += new System.EventHandler(this.cBoxOpponent_SelectedIndexChanged);
             // 
+            // cBoxBoardSize
+            // 
+            this.cBoxBoardSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.cBoxBoardSize.FormattingEnabled = true;
+            this.cBoxBoardSize.Location = new System.Drawing.Point(156, 276);
+            this.cBoxBoardSize.Name = "cBoxBoardSize";
+            this.cBoxBoardSize.Size = new System.Drawing.Size(145, 21);
+            this.cBoxBoardSize.TabIndex = 9;
+            // 
             // initForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(459, 364);
+            this.ClientSize = new System.Drawing.Size(459, 402);
             this.ControlBox = false;
+            this.Controls.Add(this.cBoxBoardSize);
             this.Controls.Add(this.cBoxOpponent);
             this.Controls.Add(this.lblErrorMsg);
             this.Controls.Add(this.chckBoxHardmode);
@@ -173,5 +184,6 @@
         private System.Windows.Forms.CheckBox chckBoxHardmode;
         private System.Windows.Forms.Label lblErrorMsg;
         private System.Windows.Forms.ComboBox cBoxOpponent;
+        private System.Windows.Forms.ComboBox cBoxBoardSize;
     }
 }

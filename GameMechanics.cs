@@ -39,10 +39,17 @@ namespace BumChessV2
             return false;
         }
 
-        public void ResetGameBoard()
-        {
 
+        //locking or unlocking cells
+        public void LockUnlockCells(Button[] cells, bool lockUnlock)
+        {
+            foreach (Button cell in cells)
+            {
+                cell.Enabled = lockUnlock;
+            }
         }
+
+
 
 
 

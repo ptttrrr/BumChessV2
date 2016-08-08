@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ComputerPlayer.cs" />
     <Compile Include="DuplicateScoreComparer.cs" />
     <Compile Include="Enumerations.cs" />
     <Compile Include="Forms\GameForm1.cs">

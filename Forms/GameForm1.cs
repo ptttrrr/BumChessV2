@@ -25,13 +25,13 @@ namespace BumChessV2.Forms
         Jukebox music = new Jukebox();
         GameMechanics game = new GameMechanics();
         Highscore highScore = new Highscore();
-
+        ComputerPlayer cpu = new ComputerPlayer();
 
         public GameForm1(Language lang, Opponent player2)
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            playerType = player2; 
+            playerType = player2;
             music.MusicMaestro(2);
         }
         
@@ -60,6 +60,7 @@ namespace BumChessV2.Forms
             NewGameInit();
         }
 
+
         //event handler for button clicks
         private void ClickHandler(object sender, System.EventArgs e)
         {
@@ -74,17 +75,20 @@ namespace BumChessV2.Forms
                 if (currentPlayer == Team.X)
                     clickedCell.Text = "X";
                 else
+                {
                     clickedCell.Text = "O";
+                }
+                    
 
                 game.Moves++;
 
-                ChangePlayer(playerType);
+                CheckIfAIplayerAndChangePlayer(playerType);
 
                 //checking for winner
                 if (game.CheckForWinner(cells))
                 {
                     roundOngoing = false;
-                    LockUnlockCells(false);
+                    game.LockUnlockCells(cells, false);
                 }
             }
             //yay.      
@@ -92,14 +96,7 @@ namespace BumChessV2.Forms
         }
 
 
-        //locking or unlocking cells
-        private void LockUnlockCells(bool lockUnlock)
-        {
-            foreach (Button cell in cells)
-            {
-                cell.Enabled = lockUnlock;
-            }
-        }
+
 
         private void GetStats()
         {
@@ -109,22 +106,41 @@ namespace BumChessV2.Forms
            
             string roundTime = time.AddSeconds(seconds).ToString("HH:mm:ss");
 
-            ChangePlayer(playerType);
+            CheckIfAIplayerAndChangePlayer(playerType);
+
             lblCongrats.Text = currentPlayer.ToString() + " won. Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
-            btnReplay.Visible = true;
-            
+            btnReplay.Visible = true;          
         }
 
-
-        private void ChangePlayer(Opponent opp)
+        //simple method for switching player.
+        public void SwitchPlayers(Team cp)
         {
-            if (currentPlayer == Team.X)
-                currentPlayer = Team.O;
-            else
-                currentPlayer = Team.X;
+            switch (cp)
+            {
+                case Team.X:
+                    currentPlayer = Team.O;
+                    break;
+                case Team.O:
+                    currentPlayer = Team.X;
+                    break;
+                default:
+                    break;
+            }
+        }
 
-            if (opp == Opponent.AI)
-                ComputerMove();
+        //switching players and checks if AI is playing and calculating AI moves.
+        private void CheckIfAIplayerAndChangePlayer(Opponent opp)
+        {
+            SwitchPlayers(currentPlayer);
+
+            if (opp == Opponent.AI && currentPlayer == Team.O)
+            {
+                int cpuMove = cpu.RandomAIMove(cells);
+
+                cells[cpuMove].Text = "O";
+                    
+                currentPlayer = Team.X;
+            }
         }
 
         //counting seconds
@@ -142,7 +158,7 @@ namespace BumChessV2.Forms
             seconds = 0;
             game.Moves = 0;
             roundOngoing = true;
-            LockUnlockCells(true);
+            game.LockUnlockCells(cells, true);
             HideShowControls(false);
             
         }
@@ -206,6 +222,18 @@ namespace BumChessV2.Forms
             lblenterName.Visible = showhide;
             txtEnterName.Visible = showhide;
             btnSaveScore.Visible = showhide;
+
+            //kicks in if the AI opponent wins
+            if (playerType == Opponent.AI && currentPlayer == Team.O)
+            {
+                lblenterName.Visible = false;
+                txtEnterName.Visible = false;
+                btnSaveScore.Visible = false;
+                lblCongrats.Text = "You lost against the mighty CPU";
+
+                highScore.CalculateScoreAndStore(game.Moves, seconds, "CPU");
+                PopulateHighScoreList();
+            }
         }
 
 
