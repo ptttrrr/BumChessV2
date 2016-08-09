@@ -117,79 +117,82 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;cBoxMode.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="cBoxLang.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 229</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>459, 402</value>
-  </data>
   <data name="btnStartGame.Size" type="System.Drawing.Size, System.Drawing">
     <value>117, 46</value>
   </data>
-  <data name="lblGameName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>46, 21</value>
+  <data name="btnQuitGame.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 46</value>
   </data>
-  <data name="btnStartGame.Text" xml:space="preserve">
-    <value>P L A Y</value>
-  </data>
-  <data name="btnQuitGame.Text" xml:space="preserve">
-    <value>Q U I T</value>
-  </data>
-  <data name="&gt;&gt;cBoxLang.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="cBoxOpponent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 175</value>
-  </data>
-  <data name="&gt;&gt;lblErrorMsg.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="cBoxOpponent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>initForm</value>
-  </data>
-  <data name="&gt;&gt;btnStartGame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="cBoxOpponent.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;cBoxOpponent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblErrorMsg.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnQuitGame.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblErrorMsg.Location" type="System.Drawing.Point, System.Drawing">
-    <value>96, 337</value>
-  </data>
-  <data name="btnStartGame.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;cBoxOpponent.Name" xml:space="preserve">
-    <value>cBoxOpponent</value>
+  <data name="cBoxBoardSize.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 180</value>
   </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="cBoxBoardSize.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;btnStartGame.Name" xml:space="preserve">
+    <value>btnStartGame</value>
   </data>
-  <data name="chckBoxHardmode.Size" type="System.Drawing.Size, System.Drawing">
-    <value>164, 17</value>
+  <data name="&gt;&gt;cBoxOpponent.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="chckBoxNormal.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 17</value>
+  <data name="cBoxOpponent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 153</value>
   </data>
-  <data name="btnStartGame.Font" type="System.Drawing.Font, System.Drawing">
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="lblGameName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="btnQuitGame.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cBoxLang.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 207</value>
+  </data>
+  <data name="&gt;&gt;btnStartGame.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cBoxOpponent.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnQuitGame.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>BumChess v.2</value>
+  </data>
+  <data name="cBoxMode.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="&gt;&gt;cBoxOpponent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>initForm</value>
+  </data>
+  <data name="&gt;&gt;cBoxBoardSize.Name" xml:space="preserve">
+    <value>cBoxBoardSize</value>
+  </data>
+  <data name="lblGameName.Text" xml:space="preserve">
+    <value>B u m C h e s s  v.2</value>
+  </data>
+  <data name="&gt;&gt;cBoxMode.Name" xml:space="preserve">
+    <value>cBoxMode</value>
+  </data>
+  <data name="&gt;&gt;btnQuitGame.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="cBoxMode.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>459, 402</value>
+  </data>
+  <data name="lblGameName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblGameName.Size" type="System.Drawing.Size, System.Drawing">
     <value>373, 50</value>
@@ -198,173 +201,110 @@
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
   </data>
-  <data name="&gt;&gt;cBoxBoardSize.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnQuitGame.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblGameName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnQuitGame.ZOrder" xml:space="preserve">
-    <value>8</value>
+  <data name="btnQuitGame.Text" xml:space="preserve">
+    <value>Q U I T</value>
   </data>
   <data name="lblGameName.Font" type="System.Drawing.Font, System.Drawing">
     <value>Comic Sans MS, 26.25pt, style=Bold, Italic</value>
   </data>
-  <data name="&gt;&gt;chckBoxHardmode.Name" xml:space="preserve">
-    <value>chckBoxHardmode</value>
-  </data>
-  <data name="btnQuitGame.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="lblGameName.Text" xml:space="preserve">
-    <value>B u m C h e s s  v.2</value>
-  </data>
-  <data name="chckBoxNormal.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblErrorMsg.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;chckBoxNormal.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cBoxBoardSize.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;lblErrorMsg.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="cBoxLang.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
-  </data>
-  <data name="&gt;&gt;lblErrorMsg.Name" xml:space="preserve">
-    <value>lblErrorMsg</value>
-  </data>
-  <data name="&gt;&gt;cBoxLang.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="lblErrorMsg.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Verdana, 12pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;chckBoxHardmode.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;chckBoxHardmode.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="chckBoxNormal.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;lblGameName.Name" xml:space="preserve">
-    <value>lblGameName</value>
-  </data>
   <data name="&gt;&gt;cBoxBoardSize.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;cBoxOpponent.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;cBoxBoardSize.Name" xml:space="preserve">
-    <value>cBoxBoardSize</value>
-  </data>
-  <data name="cBoxBoardSize.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 21</value>
-  </data>
-  <data name="&gt;&gt;cBoxLang.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;chckBoxHardmode.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnQuitGame.Name" xml:space="preserve">
-    <value>btnQuitGame</value>
-  </data>
-  <data name="&gt;&gt;btnStartGame.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="btnStartGame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>99, 323</value>
-  </data>
-  <data name="chckBoxHardmode.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;lblGameName.Parent" xml:space="preserve">
+  <data name="&gt;&gt;cBoxLang.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnStartGame.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;chckBoxNormal.Name" xml:space="preserve">
-    <value>chckBoxNormal</value>
-  </data>
-  <data name="&gt;&gt;chckBoxNormal.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>BumChess v.2</value>
+  <data name="btnStartGame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>99, 271</value>
   </data>
-  <data name="chckBoxHardmode.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 151</value>
-  </data>
-  <data name="&gt;&gt;cBoxOpponent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="lblGameName.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="btnQuitGame.Size" type="System.Drawing.Size, System.Drawing">
-    <value>117, 46</value>
-  </data>
-  <data name="btnQuitGame.Location" type="System.Drawing.Point, System.Drawing">
-    <value>237, 323</value>
-  </data>
-  <data name="lblGameName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="btnQuitGame.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
-  </data>
-  <data name="chckBoxHardmode.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;cBoxLang.Name" xml:space="preserve">
-    <value>cBoxLang</value>
-  </data>
-  <data name="&gt;&gt;lblGameName.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="chckBoxHardmode.Text" xml:space="preserve">
-    <value>SUPERDUPERHARDMODE</value>
-  </data>
-  <data name="chckBoxNormal.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 128</value>
+  <data name="&gt;&gt;cBoxLang.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="lblErrorMsg.Size" type="System.Drawing.Size, System.Drawing">
-    <value>0, 18</value>
+  <data name="&gt;&gt;btnQuitGame.Name" xml:space="preserve">
+    <value>btnQuitGame</value>
   </data>
-  <data name="&gt;&gt;chckBoxNormal.Parent" xml:space="preserve">
+  <data name="&gt;&gt;lblGameName.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnQuitGame.Parent" xml:space="preserve">
     <value>$this</value>
-  </data>
-  <data name="&gt;&gt;btnStartGame.Name" xml:space="preserve">
-    <value>btnStartGame</value>
-  </data>
-  <data name="chckBoxNormal.Text" xml:space="preserve">
-    <value>Normal mode</value>
   </data>
   <data name="cBoxLang.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
   </data>
-  <data name="lblErrorMsg.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="&gt;&gt;lblGameName.Name" xml:space="preserve">
+    <value>lblGameName</value>
   </data>
-  <data name="cBoxBoardSize.Location" type="System.Drawing.Point, System.Drawing">
-    <value>160, 202</value>
+  <data name="cBoxOpponent.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="btnQuitGame.Location" type="System.Drawing.Point, System.Drawing">
+    <value>237, 271</value>
+  </data>
+  <data name="lblGameName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 21</value>
+  </data>
+  <data name="btnStartGame.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 9pt, style=Bold</value>
+  </data>
+  <data name="cBoxBoardSize.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="btnStartGame.Text" xml:space="preserve">
+    <value>P L A Y</value>
+  </data>
+  <data name="&gt;&gt;lblGameName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;cBoxBoardSize.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnStartGame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="btnStartGame.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;cBoxLang.Name" xml:space="preserve">
+    <value>cBoxLang</value>
+  </data>
+  <data name="&gt;&gt;btnQuitGame.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cBoxMode.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cBoxLang.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cBoxLang.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="cBoxBoardSize.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="cBoxOpponent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>145, 21</value>
+  </data>
+  <data name="cBoxMode.Location" type="System.Drawing.Point, System.Drawing">
+    <value>159, 126</value>
+  </data>
+  <data name="&gt;&gt;cBoxBoardSize.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cBoxOpponent.Name" xml:space="preserve">
+    <value>cBoxOpponent</value>
+  </data>
+  <data name="&gt;&gt;lblGameName.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;cBoxMode.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

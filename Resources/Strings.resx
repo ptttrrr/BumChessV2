@@ -117,20 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnQuitGame.Text" xml:space="preserve">
-    <value>A V S L U T A</value>
-  </data>
-  <data name="btnStartGame.Text" xml:space="preserve">
-    <value>S P E L A</value>
-  </data>
-  <data name="lblGameName.Text" xml:space="preserve">
-    <value>L u f f a r S c h a c k</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblGameName.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleCenter</value>
-  </data>
-  <data name="testString" xml:space="preserve">
-    <value>Swedishhhhh</value>
+  <data name="loseString" xml:space="preserve">
+    <value>You lost against the CPU</value>
   </data>
 </root>

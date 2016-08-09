@@ -124,8 +124,8 @@
   <data name="lblHS5.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 152</value>
   </data>
-  <data name="&gt;&gt;btn9.Name" xml:space="preserve">
-    <value>btn9</value>
+  <data name="&gt;&gt;btn6.ZOrder" xml:space="preserve">
+    <value>15</value>
   </data>
   <data name="&gt;&gt;btn6.Parent" xml:space="preserve">
     <value>$this</value>
@@ -134,7 +134,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btn5.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="&gt;&gt;btn5.Parent" xml:space="preserve">
     <value>$this</value>
@@ -152,14 +152,14 @@
   <data name="&gt;&gt;lblHS5.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;lblTitle.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;btnReplay.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="lblHS3.Text" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="lblCongrats.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+    <value>highscore3</value>
   </data>
   <data name="&gt;&gt;btn7.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -185,8 +185,8 @@
   <data name="&gt;&gt;lblHighScore.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;lblCongrats.Name" xml:space="preserve">
-    <value>lblCongrats</value>
+  <data name="lblTitle.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;btn3.Name" xml:space="preserve">
     <value>btn3</value>
@@ -201,13 +201,16 @@
     <value>35, 13</value>
   </data>
   <data name="&gt;&gt;btn4.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="&gt;&gt;txtEnterName.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>GameForm1</value>
+  </data>
+  <data name="&gt;&gt;lblTitle.Name" xml:space="preserve">
+    <value>lblTitle</value>
   </data>
   <data name="&gt;&gt;btnSaveScore.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -222,22 +225,22 @@
     <value>btnBackToInitForm</value>
   </data>
   <data name="&gt;&gt;btn3.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="&gt;&gt;lblCongrats.ZOrder" xml:space="preserve">
-    <value>20</value>
+    <value>21</value>
   </data>
   <data name="lblHighScore.Text" xml:space="preserve">
-    <value>H I G H S C O R E</value>
+    <value>Highscore</value>
   </data>
-  <data name="lblHS2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btnSaveScore.Location" type="System.Drawing.Point, System.Drawing">
+    <value>493, 224</value>
   </data>
   <data name="txtEnterName.Location" type="System.Drawing.Point, System.Drawing">
     <value>493, 198</value>
   </data>
   <data name="lblHighScore.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 13</value>
+    <value>77, 13</value>
   </data>
   <data name="btnBackToInitForm.TabIndex" type="System.Int32, mscorlib">
     <value>21</value>
@@ -248,8 +251,8 @@
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
-  <data name="btn8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>118, 224</value>
+  <data name="&gt;&gt;btnBackToInitForm.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btn1.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 12</value>
@@ -264,7 +267,7 @@
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="lblCongrats.Text" xml:space="preserve">
-    <value>[wininfo]</value>
+    <value>wininfo</value>
   </data>
   <data name="lblHighScore.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -272,8 +275,8 @@
   <data name="btn5.Location" type="System.Drawing.Point, System.Drawing">
     <value>118, 119</value>
   </data>
-  <data name="&gt;&gt;btnBackToInitForm.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblTitle.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
   </data>
   <data name="lblHighScore.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 69</value>
@@ -309,10 +312,13 @@
     <value>btnReplay</value>
   </data>
   <data name="lblHS5.Text" xml:space="preserve">
-    <value>label6</value>
+    <value>highscore5</value>
+  </data>
+  <data name="&gt;&gt;btn9.Name" xml:space="preserve">
+    <value>btn9</value>
   </data>
   <data name="lblHS2.Text" xml:space="preserve">
-    <value>label3</value>
+    <value>highscore2</value>
   </data>
   <data name="&gt;&gt;lblHS4.Name" xml:space="preserve">
     <value>lblHS4</value>
@@ -330,7 +336,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;lblHS5.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>GameForm1</value>
@@ -359,17 +365,20 @@
   <data name="btn9.Location" type="System.Drawing.Point, System.Drawing">
     <value>224, 225</value>
   </data>
+  <data name="&gt;&gt;btn7.Name" xml:space="preserve">
+    <value>btn7</value>
+  </data>
   <data name="&gt;&gt;lblHS1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="lblenterName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 13</value>
+    <value>80, 13</value>
   </data>
   <data name="btn5.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 100</value>
   </data>
   <data name="&gt;&gt;btnReplay.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>11</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
@@ -379,10 +388,10 @@
     <value>100, 100</value>
   </data>
   <data name="&gt;&gt;btn9.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
-  <data name="btnReplay.Location" type="System.Drawing.Point, System.Drawing">
-    <value>631, 283</value>
+  <data name="&gt;&gt;btn4.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="btnBackToInitForm.Location" type="System.Drawing.Point, System.Drawing">
     <value>736, 6</value>
@@ -393,14 +402,23 @@
   <data name="lblCongrats.Font" type="System.Drawing.Font, System.Drawing">
     <value>Arial, 12pt</value>
   </data>
+  <data name="btnReplay.Location" type="System.Drawing.Point, System.Drawing">
+    <value>631, 283</value>
+  </data>
   <data name="lblenterName.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
   <data name="btn8.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 100</value>
   </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>BumChess</value>
+  </data>
   <data name="btn9.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 100</value>
+  </data>
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>81, 13</value>
   </data>
   <data name="&gt;&gt;lblHS3.Name" xml:space="preserve">
     <value>lblHS3</value>
@@ -409,7 +427,7 @@
     <value>100, 100</value>
   </data>
   <data name="&gt;&gt;lblHS3.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="&gt;&gt;btn4.Name" xml:space="preserve">
     <value>btn4</value>
@@ -420,20 +438,20 @@
   <data name="&gt;&gt;btn5.Name" xml:space="preserve">
     <value>btn5</value>
   </data>
+  <data name="btn1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
   <data name="&gt;&gt;lblCongrats.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="lblHS1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="btn1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="lblCongrats.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="lblCongrats.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn6.ZOrder" xml:space="preserve">
-    <value>14</value>
   </data>
   <data name="&gt;&gt;lblHS5.Name" xml:space="preserve">
     <value>lblHS5</value>
@@ -448,28 +466,28 @@
     <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btn7.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lblHS5.Size" type="System.Drawing.Size, System.Drawing">
     <value>35, 13</value>
   </data>
   <data name="btnReplay.Text" xml:space="preserve">
-    <value>P L A Y  A G A I N</value>
+    <value>Play again</value>
   </data>
   <data name="&gt;&gt;btn8.Name" xml:space="preserve">
     <value>btn8</value>
   </data>
   <data name="btnSaveScore.Text" xml:space="preserve">
-    <value>SAVE SCORE</value>
+    <value>Save score</value>
   </data>
   <data name="&gt;&gt;lblHS2.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="lblHS3.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
   <data name="&gt;&gt;txtEnterName.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="&gt;&gt;btn5.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -477,11 +495,11 @@
   <data name="&gt;&gt;btn3.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="btnSaveScore.Location" type="System.Drawing.Point, System.Drawing">
-    <value>493, 224</value>
+  <data name="lblHS2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;lblHS4.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -493,7 +511,7 @@
     <value>2</value>
   </data>
   <data name="&gt;&gt;lblHighScore.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="&gt;&gt;lblenterName.Name" xml:space="preserve">
     <value>lblenterName</value>
@@ -510,11 +528,11 @@
   <data name="btnSaveScore.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 22</value>
   </data>
-  <data name="btnBackToInitForm.Text" xml:space="preserve">
-    <value>X</value>
+  <data name="&gt;&gt;lblCongrats.Name" xml:space="preserve">
+    <value>lblCongrats</value>
   </data>
   <data name="&gt;&gt;btn2.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="&gt;&gt;btnSaveScore.Parent" xml:space="preserve">
     <value>$this</value>
@@ -532,16 +550,16 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;lblHS1.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;btn1.ZOrder" xml:space="preserve">
-    <value>19</value>
+    <value>20</value>
   </data>
   <data name="lblenterName.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 182</value>
   </data>
-  <data name="&gt;&gt;btn7.Name" xml:space="preserve">
-    <value>btn7</value>
+  <data name="&gt;&gt;lblTitle.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="lblHS2.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 113</value>
@@ -555,8 +573,14 @@
   <data name="&gt;&gt;txtEnterName.Name" xml:space="preserve">
     <value>txtEnterName</value>
   </data>
+  <data name="btn8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>118, 224</value>
+  </data>
   <data name="lblenterName.Text" xml:space="preserve">
-    <value>Enter name:</value>
+    <value>Enter your name:</value>
+  </data>
+  <data name="lblTitle.Location" type="System.Drawing.Point, System.Drawing">
+    <value>333, 310</value>
   </data>
   <data name="btn1.Size" type="System.Drawing.Size, System.Drawing">
     <value>100, 100</value>
@@ -565,13 +589,16 @@
     <value>13</value>
   </data>
   <data name="&gt;&gt;btnSaveScore.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="btn3.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="btnBackToInitForm.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
   <data name="&gt;&gt;lblenterName.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>775, 336</value>
@@ -579,14 +606,17 @@
   <data name="&gt;&gt;btn8.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;lblTitle.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="lblHS1.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
   </data>
   <data name="lblHS4.Text" xml:space="preserve">
-    <value>label5</value>
+    <value>highscore4</value>
   </data>
   <data name="lblHS1.Text" xml:space="preserve">
-    <value>label2</value>
+    <value>highscore1</value>
   </data>
   <data name="lblHS1.Location" type="System.Drawing.Point, System.Drawing">
     <value>490, 100</value>
@@ -616,7 +646,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btn8.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="lblCongrats.Location" type="System.Drawing.Point, System.Drawing">
     <value>330, 13</value>
@@ -628,10 +658,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;btnBackToInitForm.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;btn4.Parent" xml:space="preserve">
-    <value>$this</value>
+    <value>1</value>
   </data>
   <data name="txtEnterName.Size" type="System.Drawing.Size, System.Drawing">
     <value>144, 20</value>
@@ -639,10 +666,10 @@
   <data name="lblHS5.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </data>
+  <data name="$this.Language" type="System.Globalization.CultureInfo, mscorlib">
     <value>sv-SE</value>
-  </metadata>
+  </data>
 </root>

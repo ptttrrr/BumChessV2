@@ -8,16 +8,17 @@ namespace BumChessV2
 {
     class Highscore
     {
+        
         protected int baseScore = 1000;
         private SortedList<int, string> highscores = new SortedList<int, string>(new DuplicateScoreComparer<int>());
 
         public Highscore()
         {
-            highscores.Add(500, "Gert");
-            highscores.Add(42, "Deckard");
-            highscores.Add(666, "Belsebub");
-            highscores.Add(0, "Donald");
-            highscores.Add(242, "Mupp");
+            highscores.Add(500, "Knatte");
+            highscores.Add(42, "Fnatte");
+            highscores.Add(666, "Tjatte");
+            highscores.Add(0, "Jocke");
+            highscores.Add(242, "Kalle");
         }
 
 

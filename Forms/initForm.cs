@@ -26,7 +26,9 @@ namespace BumChessV2.Forms
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+
             music.MusicMaestro(1);
+
             cBoxOpponent.Items.Insert(0, "PvP");
             cBoxOpponent.Items.Insert(1, "AI");
             cBoxOpponent.SelectedIndex = 0;
@@ -34,6 +36,14 @@ namespace BumChessV2.Forms
             cBoxLang.Items.Insert(0, "English");
             cBoxLang.Items.Insert(1, "Svenska");
             cBoxLang.SelectedIndex = 0;
+
+            cBoxBoardSize.Items.Insert(0, "3x3 board");
+            cBoxBoardSize.Items.Insert(1, "6x6 board");
+            cBoxBoardSize.SelectedIndex = 0;
+
+            cBoxMode.Items.Insert(0, "Simple");
+            cBoxMode.Items.Insert(1, "Harder");
+            cBoxMode.SelectedIndex = 0;
         }
 
 
@@ -42,40 +52,6 @@ namespace BumChessV2.Forms
             Form.ActiveForm.Close();
         }
 
-
-        //private void btnEnglish_Click(object sender, EventArgs e)
-        //{
-        //        lang = Language.eng;
-
-        //        btnStartGame.Text = "P L A Y";
-        //        btnQuitGame.Text = "Q U I T";
-        //        chckBoxNormal.Text = "Normal mode";
-        //        chckBoxHardmode.Text = "SUPERDUPERHARDMODE";          
-        //}
-
-        //private void btnSwedish_Click(object sender, EventArgs e)
-        //{
-        //        lang = Language.swe;
-
-        //        btnStartGame.Text = "S P E L A";
-        //        btnQuitGame.Text = "A V S L U T A";
-        //        chckBoxNormal.Text = "Normalt spelläge";
-        //        chckBoxHardmode.Text = "Jättesvårt spelläge";
-            
-        //}
-
-
-        private void chckBoxNormal_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chckBoxNormal.Checked)
-                chckBoxHardmode.Checked = false;
-        }
-
-        private void chckBoxHardmode_CheckedChanged(object sender, EventArgs e)
-        {
-            if (chckBoxHardmode.Checked)
-                chckBoxNormal.Checked = false;
-        }
 
         private void cBoxOpponent_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -95,11 +71,7 @@ namespace BumChessV2.Forms
                 lang = Language.eng;
 
 
-            if (!chckBoxHardmode.Checked && !chckBoxNormal.Checked)       
-                    this.lblErrorMsg.Text = "Pick a game mode, please";
-            else
-            {
-                if (chckBoxNormal.Checked)
+                if (cBoxBoardSize.SelectedIndex == 0)
                 {
                     music.KillMusic();
                     this.Hide();
@@ -114,20 +86,54 @@ namespace BumChessV2.Forms
                     gameForm.Show();
                 }
             }
-        }
+        
 
         private void cBoxLang_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cBoxLang.SelectedIndex == 0)
-            {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("en-EN");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("en-EN");
-            }
             if (cBoxLang.SelectedIndex == 1)
             {
-                Thread.CurrentThread.CurrentCulture = new CultureInfo("sv-SE");
-                Thread.CurrentThread.CurrentUICulture = new CultureInfo("sv-SE");
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("sv-SE");
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(initForm));
+                resources.ApplyResources(this, "$this");
+                applyResources(resources, this.Controls);
             }
+
+            if (cBoxLang.SelectedIndex == 0)
+            {
+                System.Threading.Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en-US");
+                ComponentResourceManager resources = new ComponentResourceManager(typeof(initForm));
+                resources.ApplyResources(this, "$this");
+                applyResources(resources, this.Controls);
+            }
+        }
+
+
+        private void applyResources(ComponentResourceManager resources, Control.ControlCollection ctls)
+        {
+            foreach (Control ctl in ctls)
+            {
+                resources.ApplyResources(ctl, ctl.Name);
+                applyResources(resources, ctl.Controls);
+            }
+        }
+
+
+
+
+        private void cBoxBoardSize_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void ChangeLanguage(CultureInfo culture)
+        {
+            Application.CurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture(culture.Name);
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture(culture.Name);
         }
     }
 }

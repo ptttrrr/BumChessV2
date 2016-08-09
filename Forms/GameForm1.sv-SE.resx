@@ -117,20 +117,26 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnSaveScore.Text" xml:space="preserve">
-    <value>SPARA POÄNG</value>
+  <data name="btnReplay.Text" xml:space="preserve">
+    <value>Spela igen</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblenterName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 13</value>
+  <data name="btnSaveScore.Text" xml:space="preserve">
+    <value>Spara poäng</value>
   </data>
   <data name="lblenterName.Text" xml:space="preserve">
     <value>Skriv ditt namn:</value>
   </data>
-  <data name="lblHighScore.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 13</value>
-  </data>
   <data name="lblHighScore.Text" xml:space="preserve">
-    <value>POÄNGLIGAN</value>
+    <value>Poängligan</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblTitle.Size" type="System.Drawing.Size, System.Drawing">
+    <value>80, 13</value>
+  </data>
+  <data name="lblTitle.Text" xml:space="preserve">
+    <value>Luffarshack</value>
+  </data>
+  <data name="test" xml:space="preserve">
+    <value>test</value>
   </data>
 </root>

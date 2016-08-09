@@ -50,9 +50,6 @@ namespace BumChessV2.Forms
         private void GameForm1_Load(object sender, EventArgs e)
         {
 
-
-
-
             HideShowControls(false);
             //creating array of buttons
             cells = new Button[9] { btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn9 };
@@ -96,13 +93,19 @@ namespace BumChessV2.Forms
 
                 game.Moves++;
 
-                CheckIfAIplayerAndChangePlayer(playerType);
+                
 
                 //checking for winner
                 if (game.CheckForWinner(cells))
                 {
                     roundOngoing = false;
                     game.LockUnlockCells(cells, false);
+                    break;
+
+                }
+                else
+                {
+                    CheckIfAIplayerAndChangePlayer(playerType);
                 }
             }
             //yay.      
@@ -118,9 +121,10 @@ namespace BumChessV2.Forms
            
             string roundTime = time.AddSeconds(seconds).ToString("HH:mm:ss");
 
-            CheckIfAIplayerAndChangePlayer(playerType);
+            //CheckIfAIplayerAndChangePlayer(playerType);
 
             lblCongrats.Text = currentPlayer.ToString() + " won. Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
+            
             btnReplay.Visible = true;          
         }
 
@@ -204,13 +208,11 @@ namespace BumChessV2.Forms
         //reset board and restart game
         private void btnReplay_Click(object sender, EventArgs e)
         {
-
             foreach (Button cell in cells)
             {
                 cell.Text = "";
                 cell.BackColor = Color.LightBlue;
             }
-
             NewGameInit();         
         }
 

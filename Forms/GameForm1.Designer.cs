@@ -50,6 +50,7 @@
             this.lblHS4 = new System.Windows.Forms.Label();
             this.lblHS5 = new System.Windows.Forms.Label();
             this.btnBackToInitForm = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblCongrats
@@ -184,11 +185,17 @@
             this.btnBackToInitForm.UseVisualStyleBackColor = false;
             this.btnBackToInitForm.Click += new System.EventHandler(this.btnBackToInitForm_Click);
             // 
+            // lblTitle
+            // 
+            resources.ApplyResources(this.lblTitle, "lblTitle");
+            this.lblTitle.Name = "lblTitle";
+            // 
             // GameForm1
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnBackToInitForm);
             this.Controls.Add(this.lblHS5);
             this.Controls.Add(this.lblHS4);
@@ -240,5 +247,6 @@
         private System.Windows.Forms.Label lblHS4;
         private System.Windows.Forms.Label lblHS5;
         private System.Windows.Forms.Button btnBackToInitForm;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
