@@ -98,7 +98,7 @@ namespace BumChessV2.Forms
 
 
                 //checking for winner
-                if (game.CheckForWinner(cells, 35))
+                if (game.CheckForWinner(cells, 80))
                 {
                     roundOngoing = false;
                     game.LockUnlockCells(cells, false);
