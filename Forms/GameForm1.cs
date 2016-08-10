@@ -94,8 +94,6 @@ namespace BumChessV2.Forms
 
                 game.Moves++;
 
-                
-
                 //checking for winner
                 if (game.CheckForWinner(cells, 8))
                 {
@@ -103,7 +101,6 @@ namespace BumChessV2.Forms
                     game.LockUnlockCells(cells, false);
                     break;
                 }
-
                 else          
                     CheckIfAIplayerAndChangePlayer(playerType);
                 
@@ -210,6 +207,8 @@ namespace BumChessV2.Forms
             game.LockUnlockCells(cells, true);
             HideShowControls(false);
             lblCongrats.Visible = false;
+            currentPlayer = Team.X;
+            winner = Opponent.None;
             
         }
 

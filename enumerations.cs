@@ -17,7 +17,8 @@ namespace BumChessV2
     public enum Opponent
     {
         Human,
-        AI
+        AI,
+        None
     }
 
     public enum Board

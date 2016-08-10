@@ -131,7 +131,8 @@ namespace BumChessV2.Forms
             //if draw, skip stats. also checks if AI won and skipping some stuff
             if (game.Moves == 36 || winner == Opponent.AI)
             {
-                btnReplay.Visible = true;
+                //btnReplay.Visible = true;
+                HideShowControls(true);
                 PopulateHighScoreList();
             }
             else
@@ -210,6 +211,8 @@ namespace BumChessV2.Forms
             game.LockUnlockCells(cells, true);
             HideShowControls(false);
             lblCongrats.Visible = false;
+            currentPlayer = Team.X;
+            winner = Opponent.None;
 
         }
 
