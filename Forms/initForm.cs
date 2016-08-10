@@ -65,7 +65,7 @@ namespace BumChessV2.Forms
         private void btnStartGame_Click(object sender, EventArgs e)
         {
 
-            if (cBoxLang.SelectedIndex == 0)
+            if (cBoxLang.SelectedIndex == 1)
                 lang = Language.swe;
             else
                 lang = Language.eng;

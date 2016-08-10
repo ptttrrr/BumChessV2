@@ -41,7 +41,7 @@ namespace BumChessV2
 
             foreach (KeyValuePair<int, string> pair in highscores)
             {
-                highScoreList.Add(pair.Key.ToString() + " points by " + pair.Value.ToString());
+                highScoreList.Add(pair.Key.ToString() + " " + pair.Value.ToString());
             }
             return highScoreList;
         }

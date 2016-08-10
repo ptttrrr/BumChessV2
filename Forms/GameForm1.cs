@@ -96,7 +96,7 @@ namespace BumChessV2.Forms
                 
 
                 //checking for winner
-                if (game.CheckForWinner(cells))
+                if (game.CheckForWinner(cells, 8))
                 {
                     roundOngoing = false;
                     game.LockUnlockCells(cells, false);
@@ -123,7 +123,10 @@ namespace BumChessV2.Forms
 
             //CheckIfAIplayerAndChangePlayer(playerType);
 
-            lblCongrats.Text = currentPlayer.ToString() + " won. Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
+            if (lang == Language.swe)
+                lblCongrats.Text = "Spelet var över på " + game.Moves + " drag och " + roundTime + " sekunder";
+            else
+                lblCongrats.Text = "Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
             
             btnReplay.Visible = true;          
         }
@@ -151,7 +154,7 @@ namespace BumChessV2.Forms
 
             if (opp == Opponent.AI && currentPlayer == Team.O)
             {
-                int cpuMove = cpu.RandomAIMove(cells);
+                int cpuMove = cpu.RandomAIMove(cells, 9);
 
                 cells[cpuMove].Text = "O";
                     

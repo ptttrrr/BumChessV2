@@ -19,4 +19,12 @@ namespace BumChessV2
         Human,
         AI
     }
+
+    public enum Board
+    {
+        Small,
+        Big
+    }
+
+
 }

@@ -98,7 +98,7 @@ namespace BumChessV2.Forms
 
 
                 //checking for winner
-                if (game.CheckForWinnerBig(cells))
+                if (game.CheckForWinner(cells, 35))
                 {
                     roundOngoing = false;
                     game.LockUnlockCells(cells, false);
@@ -125,7 +125,10 @@ namespace BumChessV2.Forms
 
             //CheckIfAIplayerAndChangePlayer(playerType);
 
-            lblCongrats.Text = currentPlayer.ToString() + " won. Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
+            if (lang == Language.swe)
+                lblCongrats.Text = "Spelet var över på " + game.Moves + " drag och " + roundTime + " sekunder";
+            else
+                lblCongrats.Text = "Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
 
             btnReplay.Visible = true;
         }
@@ -153,8 +156,8 @@ namespace BumChessV2.Forms
 
             if (opp == Opponent.AI && currentPlayer == Team.O)
             {
-                int cpuMove = cpu.RandomAIMove(cells);
-
+                int cpuMove = cpu.RandomAIMove(cells, 36);
+            
                 cells[cpuMove].Text = "O";
 
                 currentPlayer = Team.X;
@@ -186,11 +189,11 @@ namespace BumChessV2.Forms
         {
             List<string> Top5List = new List<string>(highScore.ShowHighScore());
 
-            //lblHS1.Text = Top5List[4];
-            //lblHS2.Text = Top5List[3];
-            //lblHS3.Text = Top5List[2];
-            //lblHS4.Text = Top5List[1];
-            //lblHS5.Text = Top5List[0];
+            lblHS1.Text = Top5List[4];
+            lblHS2.Text = Top5List[3];
+            lblHS3.Text = Top5List[2];
+            lblHS4.Text = Top5List[1];
+            lblHS5.Text = Top5List[0];
         }
 
         //save and show updated highscore list
