@@ -24,6 +24,7 @@ namespace BumChessV2.Forms
         private int seconds;
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private DateTime time;
+        private Opponent winner;
 
         Jukebox music = new Jukebox();
         GameMechanics game = new GameMechanics();
@@ -103,10 +104,9 @@ namespace BumChessV2.Forms
                     break;
                 }
 
-                else
-                {
+                else          
                     CheckIfAIplayerAndChangePlayer(playerType);
-                }
+                
 
                 //check for a draw
                 if (game.Moves == 9)
@@ -127,9 +127,13 @@ namespace BumChessV2.Forms
 
         private void GetStats()
         {
-            //if draw, skip stats.
-            if (game.Moves == 9)
+            //if draw, skip stats. also checks if AI won and skipping some stuff
+            if (game.Moves == 9 || winner == Opponent.AI)
+            {
                 btnReplay.Visible = true;
+                PopulateHighScoreList();
+            }
+
             else
             {
                 HideShowControls(true);
@@ -137,8 +141,6 @@ namespace BumChessV2.Forms
                 timer.Stop();
 
                 string roundTime = time.AddSeconds(seconds).ToString("HH:mm:ss");
-
-                //CheckIfAIplayerAndChangePlayer(playerType);
 
                 if (lang == Language.swe)
                     lblCongrats.Text = "Spelet var över på " + game.Moves + " drag och " + roundTime + " sekunder";
@@ -176,7 +178,16 @@ namespace BumChessV2.Forms
                 int cpuMove = cpu.RandomAIMove(cells, 9);
 
                 cells[cpuMove].Text = "O";
+
+                //checking if AI wins
+                if (game.CheckForWinner(cells, 8))
+                {
+                    roundOngoing = false;
+                    HideShowControls(true);
+                    winner = Opponent.AI;
+                }
                     
+                else
                 currentPlayer = Team.X;
             }
         }
@@ -198,6 +209,7 @@ namespace BumChessV2.Forms
             roundOngoing = true;
             game.LockUnlockCells(cells, true);
             HideShowControls(false);
+            lblCongrats.Visible = false;
             
         }
 
@@ -260,10 +272,11 @@ namespace BumChessV2.Forms
                 lblenterName.Visible = false;
                 txtEnterName.Visible = false;
                 btnSaveScore.Visible = false;
-                lblCongrats.Text = "You lost against the mighty CPU";
-
-                highScore.CalculateScoreAndStore(game.Moves, seconds, "CPU");
-                PopulateHighScoreList();
+                lblCongrats.Visible = true;
+                if (lang == Language.eng)
+                    lblCongrats.Text = "You lost against the mighty CPU.";
+                else
+                    lblCongrats.Text = "Du förlorade mot datorn.";
             }
         }
 

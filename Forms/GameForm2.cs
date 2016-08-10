@@ -23,6 +23,7 @@ namespace BumChessV2.Forms
         private int seconds;
         System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
         private DateTime time;
+        private Opponent winner;
 
         Jukebox music = new Jukebox();
         GameMechanics game = new GameMechanics();
@@ -127,10 +128,12 @@ namespace BumChessV2.Forms
 
         private void GetStats()
         {
-
-            //if draw, skip stats.
-            if (game.Moves == 36)
+            //if draw, skip stats. also checks if AI won and skipping some stuff
+            if (game.Moves == 36 || winner == Opponent.AI)
+            {
                 btnReplay.Visible = true;
+                PopulateHighScoreList();
+            }
             else
             {
                 HideShowControls(true);
@@ -177,6 +180,14 @@ namespace BumChessV2.Forms
             
                 cells[cpuMove].Text = "O";
 
+                //checking if AI wins
+                if (game.CheckForWinner(cells, 35))
+                {
+                    roundOngoing = false;
+                    HideShowControls(true);
+                    winner = Opponent.AI;
+                }
+                else
                 currentPlayer = Team.X;
             }
         }
@@ -198,6 +209,7 @@ namespace BumChessV2.Forms
             roundOngoing = true;
             game.LockUnlockCells(cells, true);
             HideShowControls(false);
+            lblCongrats.Visible = false;
 
         }
 
@@ -248,10 +260,11 @@ namespace BumChessV2.Forms
                 lblenterName.Visible = false;
                 txtEnterName.Visible = false;
                 btnSaveScore.Visible = false;
-                lblCongrats.Text = "You lost against the mighty CPU";
-
-                highScore.CalculateScoreAndStore(game.Moves, seconds, "CPU");
-                PopulateHighScoreList();
+                lblCongrats.Visible = true;
+                if (lang == Language.eng)
+                    lblCongrats.Text = "You lost against the mighty CPU.";
+                else
+                    lblCongrats.Text = "Du förlorade mot datorn.";
             }
         }
 
