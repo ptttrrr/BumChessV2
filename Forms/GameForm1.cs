@@ -101,34 +101,53 @@ namespace BumChessV2.Forms
                     roundOngoing = false;
                     game.LockUnlockCells(cells, false);
                     break;
-
                 }
+
                 else
                 {
                     CheckIfAIplayerAndChangePlayer(playerType);
                 }
-            }
-            //yay.      
+
+                //check for a draw
+                if (game.Moves == 9)
+                {
+                    lblCongrats.Visible = true;
+
+                    if (lang == Language.swe)
+                        lblCongrats.Text = "Oavgjort. Försök igen.";
+                    else
+                        lblCongrats.Text = "Draw. Try again.";
+
+                    roundOngoing = false;
+                }
+            }    
             GetStats();               
         }
 
 
         private void GetStats()
         {
-            HideShowControls(true);
-            PopulateHighScoreList();
-            timer.Stop();
-           
-            string roundTime = time.AddSeconds(seconds).ToString("HH:mm:ss");
-
-            //CheckIfAIplayerAndChangePlayer(playerType);
-
-            if (lang == Language.swe)
-                lblCongrats.Text = "Spelet var över på " + game.Moves + " drag och " + roundTime + " sekunder";
+            //if draw, skip stats.
+            if (game.Moves == 9)
+                btnReplay.Visible = true;
             else
-                lblCongrats.Text = "Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
-            
-            btnReplay.Visible = true;          
+            {
+                HideShowControls(true);
+                PopulateHighScoreList();
+                timer.Stop();
+
+                string roundTime = time.AddSeconds(seconds).ToString("HH:mm:ss");
+
+                //CheckIfAIplayerAndChangePlayer(playerType);
+
+                if (lang == Language.swe)
+                    lblCongrats.Text = "Spelet var över på " + game.Moves + " drag och " + roundTime + " sekunder";
+                else
+                    lblCongrats.Text = "Game was over in " + game.Moves + " moves and " + roundTime + " seconds";
+
+                btnReplay.Visible = true;
+            }
+                   
         }
 
         //simple method for switching player.
